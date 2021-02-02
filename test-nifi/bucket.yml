@@ -2,8 +2,5 @@ flows:
   30352a9b-3620-4579-ab42-6141f79e5800: {ver: 1, file: networkflow.snapshot, comments: network
       test flow flow  first commit, author: anonymous, created: 1612243906430, flowName: networkflow,
     flowDesc: 'network test flow flow '}
-  74add4ea-9626-412e-b2fd-5e700a759e02: {ver: 2, file: logger_flow.snapshot, comments: flow
-      file added, author: anonymous, created: 1612242062720, flowName: logger flow,
-    flowDesc: ''}
 layoutVer: 1
 bucketId: 6df10153-610f-40c1-bacb-7c492cee7ff3
