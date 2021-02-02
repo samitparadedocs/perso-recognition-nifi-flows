@@ -1,0 +1,233 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ ],
+        "controllerServices" : [ ],
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "8acd6868-59fd-3fc0-86ef-c85927f6d038",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "Network template",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 480.0,
+          "y" : 328.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8acd6868-59fd-3fc0-86ef-c85927f6d038",
+          "identifier" : "437e6a05-e668-3b51-9eba-52475ec4ae0e",
+          "name" : "LogMessage",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 928.0,
+            "y" : 600.0
+          },
+          "properties" : {
+            "log-level" : "info"
+          },
+          "propertyDescriptors" : {
+            "log-message" : {
+              "displayName" : "Log message",
+              "identifiesControllerService" : false,
+              "name" : "log-message",
+              "sensitive" : false
+            },
+            "log-level" : {
+              "displayName" : "Log Level",
+              "identifiesControllerService" : false,
+              "name" : "log-level",
+              "sensitive" : false
+            },
+            "log-prefix" : {
+              "displayName" : "Log prefix",
+              "identifiesControllerService" : false,
+              "name" : "log-prefix",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.LogMessage",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8acd6868-59fd-3fc0-86ef-c85927f6d038",
+          "identifier" : "6ac44b04-53c2-365b-b8ef-c1f4bd65a83a",
+          "name" : "AttributesToCSV",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 920.0,
+            "y" : 416.0
+          },
+          "properties" : {
+            "null-value" : "false",
+            "include-core-attributes" : "true",
+            "destination" : "flowfile-attribute",
+            "include-schema" : "false"
+          },
+          "propertyDescriptors" : {
+            "null-value" : {
+              "displayName" : "Null Value",
+              "identifiesControllerService" : false,
+              "name" : "null-value",
+              "sensitive" : false
+            },
+            "include-core-attributes" : {
+              "displayName" : "Include Core Attributes",
+              "identifiesControllerService" : false,
+              "name" : "include-core-attributes",
+              "sensitive" : false
+            },
+            "attributes-regex" : {
+              "displayName" : "Attributes Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-regex",
+              "sensitive" : false
+            },
+            "destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "destination",
+              "sensitive" : false
+            },
+            "include-schema" : {
+              "displayName" : "Include Schema",
+              "identifiesControllerService" : false,
+              "name" : "include-schema",
+              "sensitive" : false
+            },
+            "attribute-list" : {
+              "displayName" : "Attribute List",
+              "identifiesControllerService" : false,
+              "name" : "attribute-list",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8acd6868-59fd-3fc0-86ef-c85927f6d038",
+          "identifier" : "212b6904-8323-3f8d-b7a6-31188755283f",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 888.0,
+            "y" : 272.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
